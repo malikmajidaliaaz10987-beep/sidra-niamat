@@ -1,0 +1,242 @@
+import { PracticeInfo, ServiceItem, FaqItem, ApproachStep } from '../types';
+
+export const INITIAL_PRACTICE_INFO: PracticeInfo = {
+  name: 'Sidra Niamat',
+  title: 'Psychologist in Lahore',
+  city: 'Lahore',
+  country: 'Pakistan',
+  phoneDisplay: '0316 4227321',
+  phoneRaw: '+923164227321',
+  email: 'malikmajidaliaaz.10987@gmail.com',
+  clinicAddress: '[Clinic Address – e.g. Consulting Suite, Gulberg III / DHA, Lahore]',
+  businessHours: 'Monday – Saturday: 10:00 AM – 7:00 PM (By Appointment)',
+  qualifications: [
+    '[M.Sc / MS in Psychology / Clinical Psychology – Academic Degree Placeholder]',
+    '[Professional Training & Supervised Clinical Practice – Credential Placeholder]',
+    '[Certified in Evidence-Informed Counseling Modalities – Training Placeholder]',
+  ],
+  areasOfInterest: [
+    'Anxiety & Stress Reduction',
+    'Emotional Regulation & Mood Balance',
+    'Interpersonal Communication & Healthy Boundaries',
+    'Student Well-being & Academic Pressure',
+    'Self-Confidence & Identity Development',
+    'Mindfulness-Based Coping Strategies',
+  ],
+};
+
+export const SERVICES_DATA: ServiceItem[] = [
+  {
+    id: 'individual-counseling',
+    name: 'Individual Counseling',
+    shortDescription: 'One-on-one sessions offering an attentive, confidential space to explore personal thoughts, feelings, and life challenges.',
+    fullDescription: 'Individual counseling provides a structured, one-on-one therapeutic partnership. Whether navigating a difficult transition, exploring underlying behavioral patterns, or simply seeking clarity, sessions are adapted to your individual pace and lived experience.',
+    benefits: [
+      'Confidential and non-judgmental environment',
+      'Personalized exploration of thoughts and behaviors',
+      'Development of practical self-awareness tools',
+      'Flexible pacing tailored to your comfort',
+    ],
+    duration: '50 Minutes',
+    format: 'In-Person (Lahore) or Secure Online Video',
+    iconName: 'User',
+  },
+  {
+    id: 'anxiety-stress-support',
+    name: 'Anxiety & Stress Support',
+    shortDescription: 'Learn gentle, practical coping mechanisms to manage everyday worry, panic sensations, and overwhelm.',
+    fullDescription: 'Persistent anxiety and high stress can impact sleep, physical health, and everyday peace of mind. We explore your stress triggers together, practice grounding exercises, and cultivate manageable routines to restore internal calm.',
+    benefits: [
+      'Identification of specific triggers and physical cues',
+      'Evidence-informed relaxation and grounding techniques',
+      'Reframing intrusive or catastrophic thought cycles',
+      'Sustainable daily stress management routines',
+    ],
+    duration: '50 Minutes',
+    format: 'In-Person (Lahore) or Secure Online Video',
+    iconName: 'HeartPulse',
+  },
+  {
+    id: 'relationship-counseling',
+    name: 'Relationship Counseling',
+    shortDescription: 'Support for understanding communication friction, setting healthy boundaries, and fostering mutual empathy.',
+    fullDescription: 'Navigating relationships with partners, close friends, or colleagues can bring significant emotional strain. Counseling provides a balanced perspective to de-escalate recurring conflicts, communicate needs with clarity, and rebuild connection.',
+    benefits: [
+      'Constructive communication tools',
+      'Clarification of mutual boundaries and expectations',
+      'Safe navigation of emotional impasses',
+      'Deepening empathy and active listening',
+    ],
+    duration: '50 - 60 Minutes',
+    format: 'In-Person (Lahore) or Secure Online Video',
+    iconName: 'Users2',
+  },
+  {
+    id: 'emotional-wellbeing',
+    name: 'Emotional Wellbeing',
+    shortDescription: 'Support for moving through low mood, emotional fatigue, sadness, and regaining a sense of vitality.',
+    fullDescription: 'When feelings of sadness or emotional heaviness persist, daily activities can feel exhausting. Sessions focus on validating your emotional state, understanding underlying causes, and taking gradual, manageable steps toward revitalization.',
+    benefits: [
+      'Empathetic listening without dismissive advice',
+      'Gentle exploration of emotional patterns',
+      'Activity scheduling and restorative habits',
+      'Strengthening resilient emotional anchors',
+    ],
+    duration: '50 Minutes',
+    format: 'In-Person (Lahore) or Secure Online Video',
+    iconName: 'Sparkles',
+  },
+  {
+    id: 'self-esteem-confidence',
+    name: 'Self-Esteem & Confidence',
+    shortDescription: 'Work through harsh self-criticism, imposter feelings, and cultivate authentic self-worth.',
+    fullDescription: 'An overly critical internal dialogue often limits our potential and prevents us from enjoying our achievements. In this counseling focus, we dismantle unrealistic perfectionism and build a compassionate, grounded self-image.',
+    benefits: [
+      'Transforming punitive inner dialogue into constructive awareness',
+      'Setting boundaries without guilt',
+      'Recognizing personal strengths and core values',
+      'Overcoming social hesitation and self-doubt',
+    ],
+    duration: '50 Minutes',
+    format: 'In-Person (Lahore) or Secure Online Video',
+    iconName: 'ShieldCheck',
+  },
+  {
+    id: 'personal-growth',
+    name: 'Personal Growth & Transitions',
+    shortDescription: 'Guidance when facing career crossroads, relocation, parenthood, or new life stages.',
+    fullDescription: 'Major life transitions can leave you feeling unsettled or uncertain. Personal growth counseling helps you clarify your core values, process change constructively, and make deliberate life choices aligned with who you are.',
+    benefits: [
+      'Clarifying life priorities and personal direction',
+      'Managing ambiguity and adjustment anxieties',
+      'Building resilience through meaningful change',
+      'Actionable decision-making frameworks',
+    ],
+    duration: '50 Minutes',
+    format: 'In-Person (Lahore) or Secure Online Video',
+    iconName: 'Compass',
+  },
+  {
+    id: 'student-counseling',
+    name: 'Student Counseling',
+    shortDescription: 'Specialized support for academic anxiety, exam stress, focus challenges, and peer pressures.',
+    fullDescription: 'Lahore students face intense competitive pressures from board exams, university admissions, and career expectations. Counseling offers young adults and university students practical tools to manage deadlines, combat burnout, and maintain mental balance.',
+    benefits: [
+      'Exam and performance anxiety alleviation',
+      'Effective time management and study habits',
+      'Balancing parental expectations and personal aspirations',
+      'Healthy peer boundary navigation',
+    ],
+    duration: '50 Minutes',
+    format: 'In-Person (Lahore) or Secure Online Video',
+    iconName: 'GraduationCap',
+  },
+  {
+    id: 'family-counseling',
+    name: 'Family Counseling',
+    shortDescription: 'Addressing intergenerational friction, household communication challenges, and collaborative family harmony.',
+    fullDescription: 'Family dynamics in our cultural context are deeply intertwined. Sessions provide a neutral, respectful mediator space where family members can express their perspectives without escalating into conflict.',
+    benefits: [
+      'Neutral, facilitated dialogue for household members',
+      'Understanding generational and cultural perspectives',
+      'De-escalating recurring family tensions',
+      'Strengthening collective harmony and understanding',
+    ],
+    duration: '60 Minutes',
+    format: 'In-Person (Lahore) or Secure Online Video',
+    iconName: 'Home',
+  },
+];
+
+export const APPROACH_STEPS: ApproachStep[] = [
+  {
+    number: '01',
+    title: 'Listen',
+    subtitle: 'A Dedicated, Safe Space',
+    description: 'Every session begins with open, attentive listening. In an unhurried and non-judgmental environment, you are invited to share what is on your mind at your own comfort level.',
+  },
+  {
+    number: '02',
+    title: 'Understand',
+    subtitle: 'Exploring Root Causes & Patterns',
+    description: 'Together, we look at the underlying thoughts, emotional responses, and life events shaping your current experience. There are no assumptions—only thoughtful inquiry.',
+  },
+  {
+    number: '03',
+    title: 'Work Together',
+    subtitle: 'Practical, Sustainable Coping',
+    description: 'We collaborate on realistic, personalized strategies you can use in daily life. This is an active, respectful partnership centered on your unique strengths and goals.',
+  },
+];
+
+export const FAQS_DATA: FaqItem[] = [
+  {
+    id: 'first-session',
+    category: 'Getting Started',
+    question: 'What happens during the first session?',
+    answer: 'The initial consultation is an introductory session designed for us to get acquainted. We will explore what prompted you to seek counseling, talk through any current difficulties you are facing, and discuss what you hope to achieve. There is no pressure to share more than you feel ready to share.',
+  },
+  {
+    id: 'session-duration',
+    category: 'Logistics',
+    question: 'How long is a session?',
+    answer: 'Standard individual psychological counseling sessions are approximately 50 minutes long. Family or multi-person consultations may be scheduled for 60 to 75 minutes by prior arrangement.',
+  },
+  {
+    id: 'how-to-book',
+    category: 'Booking',
+    question: 'How can I book an appointment?',
+    answer: 'You can submit your appointment request directly through the online booking form on this website, message via WhatsApp at 0316 4227321, or send an email to malikmajidaliaaz.10987@gmail.com. We will coordinate a mutually convenient date and time.',
+  },
+  {
+    id: 'online-sessions',
+    category: 'Logistics',
+    question: 'Are online sessions available?',
+    answer: 'Yes. Secure, confidential online video and audio sessions are available for clients located anywhere in Lahore, across other cities in Pakistan, and international residents. Online sessions offer the same level of care from the privacy of your home.',
+  },
+  {
+    id: 'expectations',
+    category: 'Counseling',
+    question: 'What should I expect from counseling?',
+    answer: 'Counseling is a collaborative process. Rather than prescribing quick fixes or guaranteed outcomes, it provides a safe setting to gain self-awareness, process emotions, and build practical coping strategies. Positive change usually comes through honest reflection and gradual practice.',
+  },
+  {
+    id: 'session-location',
+    category: 'Location',
+    question: 'Where are in-person sessions held in Lahore?',
+    answer: 'In-person sessions are held at our quiet, private consulting space in Lahore, Pakistan (accessible from central areas such as Gulberg and DHA). The exact clinic address and arrival directions are shared upon confirmed booking to maintain client privacy and security.',
+  },
+  {
+    id: 'confidentiality',
+    category: 'Privacy',
+    question: 'Is my information and conversation kept confidential?',
+    answer: 'Yes. Confidentiality is a cornerstone of professional psychological practice. Details shared during counseling sessions are treated with strict professional respect and privacy, subject only to standard ethical and safety exceptions (such as immediate risk of serious harm to self or others).',
+  },
+];
+
+export const SAMPLE_TESTIMONIALS = [
+  {
+    id: 'test-1',
+    initials: 'A. R.',
+    city: 'Lahore (Gulberg)',
+    service: 'Anxiety & Stress Counseling',
+    quote: 'The counseling room felt immediately calm and welcoming. Having an empathetic professional listen without judgment helped me break down stressful patterns I had struggled with for years.',
+    tag: 'Individual Client',
+  },
+  {
+    id: 'test-2',
+    initials: 'M. S.',
+    city: 'Lahore (DHA)',
+    service: 'Student & Academic Counseling',
+    quote: 'Preparing for professional exams had completely overwhelmed me. Working with Sidra gave me structured grounding exercises and realistic study rhythms that made a notable difference in my daily life.',
+    tag: 'Student Client',
+  },
+  {
+    id: 'test-3',
+    initials: 'F. K.',
+    city: 'Lahore (Online Consultation)',
+    service: 'Emotional Wellbeing',
+    quote: 'Online sessions fit effortlessly into my schedule. I felt heard, respected, and supported through a challenging personal transition. Highly recommended for anyone seeking authentic psychological guidance.',
+    tag: 'Online Client',
+  },
+];
